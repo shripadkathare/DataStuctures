@@ -1,0 +1,50 @@
+import javax.sound.midi.Soundbank;
+
+public class count_set {
+    public static void count1()
+    {
+        int n =7;
+        int count = 0;
+        while(n>0)
+        {
+            if((n&1)!=0)
+                count++;
+                n=n/2;              
+        }
+        System.out.println(count);
+    }
+
+    public static void count2()
+    {
+        int n = 12;
+        int count =0;
+        while(n>0)
+            if((n&1)!=0)
+            {
+                count++;
+                n=(n>>1);
+            }
+            else
+                n=(n>>1);
+        System.out.println(count);
+    }
+
+    public static void count3()
+    {
+        int n = 5;
+        int count =0;
+        while(n>0)
+        {
+            n=n&(n-1);
+            count=count+1;
+        }
+        System.out.println(count);        
+    }
+
+
+    public static void main(String[] args) {
+        count1();
+        count2();
+        count3();
+    }
+}
